@@ -1,0 +1,104 @@
+/**
+ * Pure JavaScript bokeh demo
+ * CSS part
+ */
+
+@font-face {
+  font-family: "MinSans-Thin";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Thin.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MinSans-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/MinSans-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+  background: black;
+
+  overflow: hidden;
+  font-family: MinSans-Thin;
+}
+
+html,
+body {
+  /* prevent from scrolling */
+  user-select: none;
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  color: black;
+  font-family: MinSans-Thin;
+  font-size: large;
+
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#main-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 100;
+}
+
+#main-menu {
+  display: grid;
+  grid-template-rows: 2fr 3fr;
+  justify-items: center;
+  align-items: center;
+  width: 12rem;
+  height: 16rem;
+
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+
+@media (min-width: 384px) {
+  #main-menu {
+    width: 24rem;
+  }
+}
+
+#buttons {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+
+  width: 80%;
+}
+
+#title {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  color: black;
+  font-size: x-large;
+}
