@@ -38,6 +38,10 @@ body {
 }
 
 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: 0.5rem;
   border: none;
   border-radius: 8px;
@@ -69,21 +73,23 @@ button:hover {
 
 #main-menu {
   display: grid;
-  grid-template-rows: 2fr 3fr;
+  grid-template-rows: 2fr 2fr 3fr;
   justify-items: center;
   align-items: center;
   width: 12rem;
-  height: 16rem;
+  height: 24rem;
 
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
 }
 
-@media (min-width: 384px) {
-  #main-menu {
-    width: 24rem;
-  }
+#select-bokeh-type {
+  display: grid;
+  grid-template-columns: 2.5rem auto 2.5rem;
+  gap: 1rem;
+
+  width: 80%;
 }
 
 #buttons {
@@ -91,6 +97,7 @@ button:hover {
   gap: 1rem;
   grid-template-rows: 1fr;
   grid-gap: 1rem;
+  align-items: center;
 
   width: 80%;
 }
@@ -101,4 +108,21 @@ button:hover {
   background: rgba(255, 255, 255, 0.4);
   color: black;
   font-size: x-large;
+}
+
+#select-item {
+  display: flex;
+  justify-content: center;
+
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  color: black;
+  font-size: large;
+}
+
+@media (min-width: 384px) {
+  #main-menu {
+    width: 24rem;
+  }
 }
